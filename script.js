@@ -44,11 +44,15 @@ function playGame() {
    
 }
 
-playRound()
-playRound()
-playRound()
-playRound()
-playRound()
+
+for (let i = 0; i < 5; i++) {
+    // const humanSelection = getHumanChoice();
+    // const computerSelection = getComputerChoice();
+    playRound();
+
+    console.log(`Human Score: ${humanScore}  Computer Score: ${computerScore}`);  
 
 }
+}
 
+playGame();
