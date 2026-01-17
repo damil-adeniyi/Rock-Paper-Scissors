@@ -8,11 +8,24 @@ function getComputerChoice () {
     // console.log(randomChoice);   
 }
 
-function getHumanChoice () {
-    let humanChoice = prompt('Pick your choice between rock, paper or scissors');
-    return humanChoice
-    // console.log(humanChoice);    
-}
+    let btn1 = document.createElement('button');
+    let btn2 = document.createElement('button');
+    let btn3 = document.createElement('button');
+
+    let container = document.querySelector('.container')
+    container.appendChild(btn1);
+    container.appendChild(btn2);
+    container.appendChild(btn3);
+
+    btn1.innerText = 'rock';
+    btn2.innerText = 'paper';
+    btn3.innerText = 'scissors';
+
+// function getHumanChoice () {
+//     let humanChoice = prompt('Pick your choice between rock, paper or scissors');
+//     return humanChoice;
+//     // console.log(humanChoice);    
+// }
 
 let humanScore = 0;
 let computerScore = 0;
@@ -20,6 +33,7 @@ let computerScore = 0;
 
 
 function playGame() {
+    
 
     function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice().toLowerCase();
@@ -55,4 +69,4 @@ for (let i = 0; i < 5; i++) {
 }
 }
 
-playGame();
+// playGame();
